@@ -1,25 +1,27 @@
+[Русский](README.md)
+
 # artificial-life
 
 Digital life in 300 lines of Python.
 
-Cells eat, divide, die. Evolution happens on its own — no clever algorithms, just simple rules and natural selection.
+Cells eat, divide, die. Evolution happens on its own — no clever code, just simple rules and natural selection.
 
 ## What's inside
 
-- **Environment** — a grid with food. Food grows randomly.
-- **Organisms** — each has energy, a genome (speed/size/perception), and age.
-- **Evolution** — genome mutates on division. Weak ones die faster.
-- **Visualization** — ASCII to terminal or pygame window.
+- **Environment** — a grid with food that grows randomly
+- **Organisms** — energy, genome (speed/size/perception), age
+- **Evolution** — genome mutates on division, weak ones die faster
+- **Visualization** — ASCII in terminal or a pygame window
 
-## Usage
+## Run
 
 ```bash
 pip install pygame
 python life.py          # pygame window
-python life.py --ascii  # in the terminal
+python life.py --ascii  # terminal output
 ```
 
-Options:
+Flags:
 ```
 --width   grid width (default 80)
 --height  grid height (default 40)
@@ -27,22 +29,15 @@ Options:
 --fps     frames per second
 ```
 
-## What to watch
-
-Run it and wait 5 minutes. Watch how:
-- population first explodes, then collapses
-- those with optimal speed/perception balance survive
-- dominant clones sometimes emerge
-
-## Genome structure
+## Genome
 
 ```python
 genome = {
-    "speed":      float,  # cells moved per turn
-    "perception": float,  # food "vision" radius
+    "speed":      float,  # cells moved per tick
+    "perception": float,  # food detection radius
     "size":       float,  # affects energy consumption
-    "mutation":   float,  # offspring mutation probability
+    "mutation":   float,  # mutation probability for offspring
 }
 ```
 
-Every parameter is a trade-off. Fast burns more energy. Large sees further but moves slower.
+Every trait is a trade-off. Faster means hungrier. Larger means slower.
