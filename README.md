@@ -48,7 +48,3 @@ genome = {
 
 Каждый параметр — компромисс. Быстрый жрёт больше энергии. Большой видит
 дальше, но медленнее.
-
-## Источник вдохновения
-
-[artificial-life](https://github.com/MichaelMure/artificial-life) из HelloGitHub #121
